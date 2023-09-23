@@ -1,4 +1,6 @@
 FROM httpd
 COPY src/ /usr/local/apache2/htdocs/
 
-EXPOSE 8080
+COPY apache2.conf /etc/apache2/apache2.conf
+
+RUN a2enmod rewrite
