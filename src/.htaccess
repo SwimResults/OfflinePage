@@ -1,3 +1,4 @@
 RewriteEngine on
 RewriteCond %{REQUEST_URI} !^/index.html$
+RewriteCond %{REQUEST_URI} !^/style.css$
 RewriteRule ^(.*)$ /index.html [L,R=302]
