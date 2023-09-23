@@ -1,7 +1,6 @@
-FROM httpd
-COPY src/ /usr/local/apache2/htdocs/
+FROM httpd:alpine
 
-COPY apache2.conf /etc/apache2/apache2.conf
+COPY src/ /var/www/html/
 
 RUN sed -i '/LoadModule rewrite_module/s/^#//g' /usr/local/apache2/conf/httpd.conf
 
