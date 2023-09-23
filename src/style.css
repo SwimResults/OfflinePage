@@ -1,0 +1,80 @@
+:root {
+    --main-first: #0171c0;
+    --gradient-first: #00B0B0;
+    --gradient-second: #0239CF;
+    --background-gray: #f4f4f4;
+}
+
+@font-face {
+    font-family: "SwimResults";
+    src: url("assets/font/SwimResults.ttf");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: SwimResults, Arial, serif;
+    color: black;
+}
+
+.background {
+    background-image: url("assets/images/bg_dark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-text {
+    color: white;
+    font-weight: 800;
+    padding: 34px;
+    bottom: 0;
+    position: absolute;
+    font-size: 70px;
+}
+
+.title,
+.subtitle {
+    display: block;
+}
+
+.title {
+    font-size: 70px;
+}
+
+.subtitle {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 660px) {
+    .title {
+        font-size: 50px;
+    }
+    .subtitle {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .background-text {
+        text-align: center;
+        width: calc(100% - 68px);
+        top: 0;
+        padding-top: 100px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .title,
+    .subtitle {
+        width: 100%;
+    }
+}
